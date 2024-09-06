@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>دورهمی پارچ</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>دورهمی پارچ</h1>
-            <p>به جامعه دورهمی پارچ بپیوندید و آخرین جلسات را از دست ندهید!</p>
-            <nav>
-                <ul>
-                    <li><a href="#meetup-info">جلسه بعدی</a></li>
-                    <li><a href="#archive">آرشیو جلسات</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>دورهمی پارچ</title>
+		<link rel="stylesheet" href="./assets/styles/general.css" />
+		<link rel="stylesheet" href="./assets/styles/style.css" />
+		<script src="./assets/scripts/script.js" defer></script>
+		<!-- TODO: FAVICON -->
+	</head>
+	<body>
+		<header class="container">
+			<h1>دورهمی پارچ</h1>
+			<p>به دورهمی های جامعه پارچ بپیوندید و از اینجا دنبال کنید.</p>
+			<nav>
+				<ul class="header-link-list">
+					<li><a href="#meetup-info">جلسه بعدی</a></li>
+					<li><a href="#archive">آرشیو جلسات</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="container round-border">
+			<section id="meetup-info" class="next-meetup">
+				<h2>
+					اطلاعات جلسه بعدی:&VeryThinSpace;
+					<span class="next-meetup__title"></span>
+				</h2>
 
-    <main class="container">
-        <!-- Next Meetup Info -->
-        <section id="meetup-info">
-            <h2>اطلاعات جلسه بعدی</h2>
-            <div>
-                <p><strong>تاریخ:</strong> ۳۱ شهریور ۱۴۰۳</p>
-                <p><strong>زمان:</strong> ۱۷:۰۰ عصر</p>
-                <p><strong>مکان:</strong> بیگ بلو باتن</p>
-            </div>
-        </section>
-
-        <!-- Archive Section -->
-        <section id="archive">
-            <h2>آرشیو جلسات</h2>
-            <ul>
-                <li><strong>جلسه صفرم:</strong> ۲۸ مرداد ۱۴۰۳ - <a href="archives/session0.html">مشاهده</a></li>
-            </ul>
-        </section>
-
-        <button id="join-meetup" onclick="window.location.href='https://meetup.parchlinux.com'">لینک جلسه جدید به زودی قرار می‌گیرد.</button>
-    </main>
-
-    <footer class="container">
-        <p>دورهمی پارچ ۱۴۰۳</p>
-        <p>ما را در شبکه‌های اجتماعی دنبال کنید:</p>
-        <ul>
-            <li><a href="https://ieji.de/@parchlinux" target="_blank">ماستادون</a></li>
-            <li><a href="https://git.parchlinux.com/" target="_blank">گیت‌لب</a></li>
-            <li><a href="https://telegram.me/parchlinux" target="_blank">تلگرام</a></li>
-        </ul>
-    </footer>
-</body>
+				<div class="next-meetup__details">
+					<p><strong>تاریخ برگزاری:&MediumSpace;</strong>۳۱ شهریور ۱۴۰۳</p>
+					<p><strong>زمان برگزاری:&MediumSpace;</strong>۱۷:۰۰</p>
+					<p><strong>مکان برگزاری:&MediumSpace;</strong>مجازی (بیگ بلو باتن)</p>
+				</div>
+				<button id="join-meetup" class="next-meeting-link round-border">
+					لینک ورود به جلسه
+				</button>
+			</section>
+			<section id="archive" class="meetup-archive">
+				<h2>آرشیو جلسات پیشین</h2>
+				<ul>
+					<li>
+						<strong>جلسه صفرم:</strong> ۲۸ مرداد ۱۴۰۳ -
+						<a href="archives/session0.html">مشاهده</a>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer class="container">
+			<strong
+				style="cursor: pointer"
+				onclick="newtab('https://parchlinux.com')"
+			>
+				پارچ لینوکس
+			</strong>
+			<p>ما را در شبکه‌های اجتماعی دنبال کنید:</p>
+			<ul>
+				<li>
+					<a href="https://ieji.de/@parchlinux" target="_blank">ماستادون</a>
+				</li>
+				<li>
+					<a href="https://parchlinux.t.me" target="_blank">تلگرام</a>
+				</li>
+				<li>
+					<a href="https://git.parchlinux.com/" target="_blank">گیت‌لب</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
 </html>

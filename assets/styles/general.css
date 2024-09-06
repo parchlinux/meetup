@@ -1,0 +1,100 @@
+@import url(../fonts/vazirmatn.css);
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Vazirmatn, Arial, monospace;
+	text-wrap: balance;
+	user-select: text;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: var(--white);
+	color: var(--black);
+}
+
+*::selection {
+	color: var(--white);
+	background-color: var(--black);
+}
+
+:root {
+	--white: #f0f0f0;
+	--black: #1f1f1f;
+
+	--main-bg: #f9f9f9;
+
+	--blue0: #caf0f8;
+	--blue1: #ade8f4;
+	--blue2: #90e0ef;
+	--blue3: #48cae4;
+	--blue4: #00b4d8;
+	--blue5: #0096c7;
+	--blue6: #0077b6;
+	--blue7: #023e8a;
+	--blue8: #03045e;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: var(--blue6);
+}
+
+a:hover {
+	text-decoration: underline;
+	color: var(--blue7);
+}
+
+.round-border {
+	border-radius: 0.6rem;
+}
+
+.container {
+	width: 90%;
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+header,
+footer {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	gap: 1.4rem;
+}
+
+footer {
+	gap: 0.6rem;
+	font-size: 1.4rem;
+}
+
+button {
+	border: none;
+	outline: none;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	padding: 1.2rem;
+	background-color: var(--blue6);
+	color: var(--white);
+	font-size: 2rem;
+	cursor: pointer;
+	text-align: center;
+}
+
+button:hover {
+	background-color: var(--blue7);
+}
