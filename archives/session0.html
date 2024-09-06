@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>جلسه ۱ - دورهمی پارچ</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>جلسه صفرم - دورهمی پارچ</h1>
-            <p>تاریخ: ۲۸ مرداد ۱۴۰۳</p>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">بازگشت به صفحه اصلی</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>دورهمی پارچ &mdash; جلسه صفرم</title>
+		<link rel="stylesheet" href="../assets/styles/general.css" />
+		<link rel="stylesheet" href="../assets/styles/style.css" />
+		<!-- TODO: FAVICON -->
+	</head>
+	<body>
+		<header class="container">
+			<h1>دورهمی پارچ</h1>
+			<p>به دورهمی های جامعه پارچ بپیوندید و از اینجا دنبال کنید.</p>
+			<nav>
+				<ul class="header-link-list">
+					<li><a href="../index.html#meetup-info">جلسه بعدی</a></li>
+					<li><a href="../index.html#archive">آرشیو جلسات</a></li>
+				</ul>
+			</nav>
+			<strong
+				><a href="../index.html" id="back-to-index"
+					>به صفحه اصلی برگردید</a
+				></strong
+			>
+		</header>
+		<main class="container round-border">
+			<section id="meetup-archive">
+				<h2>
+					جلسه صفرم:&VeryThinSpace;
+					<span class="next-meetup__title">تولد سه سالگی پارچ</span>
+				</h2>
+				<h3>موضوعات مورد بحث شامل:</h3>
+				<ul>
+					<li>بررسی آخرین تغییرات توزیع پارچ</li>
+					<li>معرفی ابزارهای جدید برای توسعه</li>
+					<li>پاسخ به سوالات کاربران</li>
+				</ul>
+				<h3>ارائه‌ دهندگان این جلسه:</h3>
+				<ul>
+					<li>
+						علی الماسی با موضوع نیم‌نگاهی بر پارچ، آیندهٔ پارچ و فراتر از آن
+					</li>
+				</ul>
+				<button
+					onclick="window.location.replace('https://youtu.be/LkdvM9McqM4')"
+					class="round-border"
+				>
+					تماشای جلسه از یوتوب
+				</button>
 
-    <main class="container">
-        <section id="session-details">
-            <h2>جزئیات جلسه</h2>
-            <p>تولد سه سالگی پارچ.</p>
-            <p>موضوعات مورد بحث شامل:</p>
-            <ul>
-                <li>بررسی آخرین تغییرات توزیع پارچ</li>
-                <li>معرفی ابزارهای جدید برای توسعه</li>
-                <li>پاسخ به سوالات کاربران</li>
-            </ul>
-            <h3>ارائه‌ دهندگان این جلسه:</h3>
-            <ul>
-                <li> علی الماسی با موضوع نیم‌نگاهی بر پارچ </li>
-            </ul>
-        </section>
-        <button id="join-meetup" onclick="window.location.href='https://youtu.be/LkdvM9McqM4'">تماشای جلسه از یوتوب</button>
-        <button id="join-meetup" onclick="window.location.href='https://tubedu.org/w/t7FJttMwPgpLpCJJZWfcar'">تماشای جلسه از پیرتوب</button>
-    </main>
-
-    <footer class="container">
-        <p>دورهمی پارچ ۱۴۰۳</p>
-        <p>ما را در شبکه‌های اجتماعی دنبال کنید:</p>
-        <ul>
-            <li><a href="https://ieji.de/@parchlinux" target="_blank">ماستادون</a></li>
-            <li><a href="https://git.parchlinux.com/" target="_blank">گیت‌لب</a></li>
-            <li><a href="https://telegram.me/parchlinux" target="_blank">تلگرام</a></li>
-        </ul>
-    </footer>
-</body>
+				<button
+					onclick="window.location.replace('https://tubedu.org/w/t7FJttMwPgpLpCJJZWfcar')"
+					class="round-border"
+				>
+					تماشای جلسه از پیرتوب
+				</button>
+			</section>
+		</main>
+		<footer class="container">
+			<strong
+				style="cursor: pointer"
+				onclick="newtab('https://parchlinux.com')"
+			>
+				پارچ لینوکس
+			</strong>
+			<p>ما را در شبکه‌های اجتماعی دنبال کنید:</p>
+			<ul>
+				<li>
+					<a href="https://ieji.de/@parchlinux" target="_blank">ماستادون</a>
+				</li>
+				<li>
+					<a href="https://parchlinux.t.me" target="_blank">تلگرام</a>
+				</li>
+				<li>
+					<a href="https://git.parchlinux.com/" target="_blank">گیت‌لب</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
 </html>
