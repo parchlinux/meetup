@@ -1,10 +1,34 @@
 "use strict";
 
-const meetingLink = false;
-// اگر لینک جلسه آماده بود، این متغیر باید برابر True شود
-const meetingLinkAddress = "https://meetup.parchlinux.com";
-// لینک جلسه اینجا وارد شود
-const meetingTitle = "دورهمی روز آزادی نرم‌افزار";
+const meetupTitle = document.querySelector(".next-meetup__title");
+const meetupTime = document.querySelector(".next-meetup__time");
+const meetupDate = document.querySelector(".next-meetup__date");
+const meetupPlace = document.querySelector(".next-meetup__place");
+const meetupLink = document.getElementById("join-meetup");
+
+fetch("./status.json")
+	.then((response) => response.json())
+	.then((meetup) => {
+		if (meetup.planned) {
+			meetupTitle.textContent = meetup.title;
+			meetupTime.textContent = meetup.time;
+			meetupDate.textContent = meetup.date;
+			meetupPlace.textContent = meetup.place;
+			meetupLink.textContent = "لینک ورود به جلسه";
+			meetupLink.addEventListener("click", () => location.replace(meetup.link));
+		} else {
+			meetupTitle.textContent = "فعلا مشخص نشده";
+			meetupTime.textContent = "فعلا مشخص نشده";
+			meetupDate.textContent = "فعلا مشخص نشده";
+			meetupPlace.textContent = "فعلا مشخص نشده";
+			meetupLink.textContent = "بزودی مشخص خواهد شد";
+			meetupLink.addEventListener("click", () =>
+				alert("هنوز جلسه بعدی مشخص نشده. ⚠️")
+			);
+			document.querySelector(".next-meetup__details").style.display = "none";
+		}
+	})
+	.catch((err) => console.error(err));
 
 const newtab = function (href) {
 	let a = document.createElement("a");
@@ -13,17 +37,3 @@ const newtab = function (href) {
 	a.click();
 	a.remove();
 };
-
-if (meetingLink) {
-	document.querySelectorAll(".next-meeting-link").forEach((link) => {
-		link.addEventListener("click", () => location.replace(meetingLinkAddress));
-	});
-	document.querySelector(".next-meetup__title").textContent = meetingTitle;
-} else {
-	document.querySelectorAll(".next-meeting-link").forEach((link) => {
-		link.textContent = "لینک جلسه جدید به زودی قرار می‌گیرد. 🕒";
-		link.addEventListener("click", () =>
-			alert("هنوز هیچ لینکی برای این جلسه آماده نشده. ⚠️")
-		);
-	});
-}
