@@ -6,7 +6,7 @@ const meetupDate = document.querySelector(".next-meetup__date");
 const meetupPlace = document.querySelector(".next-meetup__place");
 const meetupLink = document.getElementById("join-meetup");
 
-fetch("./status.json")
+fetch("./upcoming.json")
 	.then((response) => response.json())
 	.then((meetup) => {
 		if (meetup.planned) {
