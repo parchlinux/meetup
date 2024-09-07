@@ -1,5 +1,13 @@
 "use strict";
 
+const newtab = function (href) {
+	let a = document.createElement("a");
+	a.href = href;
+	a.setAttribute("target", "_blank");
+	a.click();
+	a.remove();
+};
+
 const meetupTitle = document.querySelector(".next-meetup__title");
 const meetupTime = document.querySelector(".next-meetup__time");
 const meetupDate = document.querySelector(".next-meetup__date");
@@ -14,8 +22,16 @@ fetch("./upcoming.json")
 			meetupTime.textContent = meetup.time;
 			meetupDate.textContent = meetup.date;
 			meetupPlace.textContent = meetup.place;
-			meetupLink.textContent = "لینک ورود به جلسه";
-			meetupLink.addEventListener("click", () => location.replace(meetup.link));
+			let linkNotReady =
+				meetup.link.length <= 0 || meetup.link.includes("meetup.parchlinux");
+			meetupLink.textContent = linkNotReady
+				? "بزودی لینک قرار خواهد گرفت 🕒"
+				: "لینک ورود به جلسه";
+			meetupLink.addEventListener("click", () => {
+				!linkNotReady
+					? (window.location.href = meetup.link)
+					: alert("هنوز لینکی برای جلسه آماده نشده. لطفا بعدا بررسی کنید.");
+			});
 		} else {
 			meetupTitle.textContent = "فعلا مشخص نشده";
 			meetupTime.textContent = "فعلا مشخص نشده";
@@ -28,12 +44,7 @@ fetch("./upcoming.json")
 			document.querySelector(".next-meetup__details").style.display = "none";
 		}
 	})
-	.catch((err) => console.error(err));
-
-const newtab = function (href) {
-	let a = document.createElement("a");
-	a.href = href;
-	a.setAttribute("target", "_blank");
-	a.click();
-	a.remove();
-};
+	.catch((err) => {
+		console.error(err);
+		alert("Error while fetching meetup information. Check the console.");
+	});
