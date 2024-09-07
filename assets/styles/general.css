@@ -95,6 +95,29 @@ button {
 	text-align: center;
 }
 
-button:hover {
+button:hover,
+button:focus {
 	background-color: var(--blue7);
+}
+
+button:active {
+	background-color: transparent;
+	box-shadow: 0 0 0 2px var(--blue7);
+	color: var(--black);
+}
+
+.noscript {
+	background-color: var(--white);
+	position: fixed;
+	min-width: 100dvw;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 1.8rem;
+	font-size: 1.8rem;
+	overflow: hidden;
+	z-index: 999999999;
 }
