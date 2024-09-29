@@ -14,7 +14,7 @@
 			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💙</text></svg>"
 		/>
 	</head>
-	<body>
+	<body onload="fetchMeetupInfo()">
 		<noscript>
 			<div class="container noscript">
 				<h2>جاوا اسکریپت شما غیرفعال است.</h2>
@@ -44,7 +44,7 @@
 				<ul class="header-link-list">
 					<li><a href="#meetup-info">جلسه بعدی</a></li>
 					<li><a href="#archive">آرشیو جلسات</a></li>
-					<li><a href="statements/statement.html">بیانیه دورهمی پارچ </a></li>
+					<li><a href="#statements">بیانیه‌ها</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -76,10 +76,25 @@
 			</section>
 			<section id="archive" class="meetup-archive">
 				<h2>آرشیو جلسات پیشین</h2>
-				<ul>
+				<ul class="reverse">
+					<!-- * ADD NEW PAGES TO THE END OF THIS UL ELEMENT -->
 					<li>
 						<strong>جلسه صفرم:</strong> ۲۸ مرداد ۱۴۰۳ -
-						<a href="archives/session0.html">مشاهده</a>
+						<a href="./archives/session0.html">مشاهده</a>
+					</li>
+					<li>
+						<strong>جلسه یکم:</strong> ۲ مهر ۱۴۰۳ -
+						<a href="./archives/session1.html">مشاهده</a>
+					</li>
+				</ul>
+			</section>
+			<section id="statements" class="statements">
+				<h2>فهرست بیانیه‌های دورهمی پارچ</h2>
+				<ul class="reverse">
+					<!-- * ADD NEW PAGES TO THE END OF THIS UL ELEMENT -->
+					<li>
+						<span>بیانیه دورهمی روز آزادی نرم‌افزار ۱۴۰۳</span> -
+						<a href="./statements/sfd1403.html">مشاهده</a>
 					</li>
 				</ul>
 			</section>

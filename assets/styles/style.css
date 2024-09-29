@@ -27,11 +27,12 @@ main h3 {
 	margin-bottom: 1.4rem;
 }
 
-.next-meetup {
-	margin-bottom: 2.2rem;
+section + section {
+	margin-top: 2.2rem;
 }
 
-.meetup-archive ul {
+.meetup-archive ul,
+.statements ul {
 	list-style: none;
 }
 
@@ -68,4 +69,16 @@ section#meetup-archive h3 + ul {
 
 button + button {
 	margin-top: 1rem;
+}
+
+.statement {
+	display: flex;
+	flex-direction: column;
+	gap: 1.8rem;
+	padding-top: 1.2rem;
+}
+
+.statement__header {
+	padding-bottom: 1.6rem;
+	border-bottom: 1px solid var(--black);
 }
