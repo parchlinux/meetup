@@ -7,7 +7,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Vazirmatn, Arial, monospace;
-	text-wrap: balance;
 	user-select: text;
 }
 
@@ -58,6 +57,16 @@ a:hover {
 	border-radius: 0.6rem;
 }
 
+.center {
+	text-align: center;
+}
+
+.reverse {
+	display: flex;
+	flex-direction: column-reverse;
+	line-height: 1.8em;
+}
+
 .container {
 	width: 90%;
 	max-width: 80rem;
@@ -84,7 +93,7 @@ footer {
 button {
 	border: none;
 	outline: none;
-	width: 80%;
+	width: 100%;
 	display: block;
 	margin: 0 auto;
 	padding: 1.2rem;
@@ -104,6 +113,13 @@ button:active {
 	background-color: transparent;
 	box-shadow: 0 0 0 2px var(--blue7);
 	color: var(--black);
+}
+
+button[disabled="true"] {
+	background-color: transparent;
+	box-shadow: 0 0 0 2px var(--blue7);
+	color: var(--black);
+	cursor: not-allowed;
 }
 
 .noscript {
